@@ -1,5 +1,10 @@
 # Rust executables
 **/main
+debug/
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
 
 # Dependencies
 /node_modules

@@ -1,0 +1,27 @@
+---
+title: Function
+---
+Example of function.
+
+import CodeBlock from '@theme/CodeBlock';
+import func from '!!raw-loader!/src/03-function/main.rs';
+
+<CodeBlock language="rust" title="src/03-function/main.rs" showLineNumbers>{func}</CodeBlock>
+
+:::danger
+
+In the above example, ff we assign `x`, and `y` both to be `2147483647` (max
+`i32`), the result will overflow `i32` range. Unfortunately, such errors are not
+caught compile time.
+
+Check out helper methods: [wrapping_add](https://doc.rust-lang.org/std/primitive.i32.html#method.wrapping_add), [saturating_add](https://doc.rust-lang.org/std/primitive.i32.html#method.saturating_add), [overflowing_add](https://doc.rust-lang.org/std/primitive.i32.html#method.overflowing_add), [checked_add](https://doc.rust-lang.org/std/primitive.i32.html#method.checked_add).
+
+:::
+
+### Calculate area of a circle
+Another example where we calculate area of a circle with the input radius given
+by the user.
+
+import circle_area from '!!raw-loader!/src/03-circle-area/main.rs';
+
+<CodeBlock language="rust" title="src/03-circle-area/main.rs" showLineNumbers>{circle_area}</CodeBlock>

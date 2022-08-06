@@ -1,15 +1,28 @@
-/*******************************************************************************
-Program: Assigning variables
-Author: Pranab Das
-Version: 20210430
-*******************************************************************************/
 fn main() {
-    let my_age = 34;  // by default variables are immutable
-    println!("I'm {} years old.", my_age);
+    let age = 34; // by default variables are immutable
+    println!("I'm {} years old.", age);
 
-    let mut my_var = 10;  // need to explicitly declare mutable variables
-    println!("My variable = {}", my_var);
+    // need to explicitly declare mutable variables with keyword mut
+    let mut x = 10;
+    println!("My variable = {}", x);
 
-    my_var = 10 + 5;
-    println!("My variable = {}", my_var);
+    x = 10 + 5;
+    println!("My variable = {}", x);
+
+    const PI: f64 = 3.14159; // mut keyword in not allowed with const
+    println!("Pi * 2 = {}", PI * 2);
+
+    // variable shadowing
+    let spaces = "   ";
+
+    // it is allowed to declare variables with same name shadowing the previous
+    // variable with the same name
+    let spaces = spaces.len(); // notice data type is different too
+
+    {
+        let spaces = spaces * 2;
+        println!("double spaces (inner scope) = {spaces}");
+    }
+
+    println!("spaces (outer scope) =  {spaces}");
 }
