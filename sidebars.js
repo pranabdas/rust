@@ -12,6 +12,7 @@ module.exports = {
         "basics/hello-world",
         "basics/variables",
         "basics/data-type",
+        "basics/arrays",
         "basics/function",
         "basics/if-else",
         "basics/loop",

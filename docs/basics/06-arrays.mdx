@@ -1,0 +1,36 @@
+---
+title: Arrays and tuples
+---
+In rust, the data types of all array element have to the same. We can declare an
+array by:
+```rs
+let x = [1, 2, 3];
+```
+
+We can access the elements of the array by:
+```rs
+first_element = x[0]
+```
+
+If we want to modify the elements of the array, we need to use the keyword `mut`
+during declaration:
+```rs
+let mut x = [1, 2, 3];
+x[0] = 4
+```
+
+Some more example of array:
+
+import CodeBlock from '@theme/CodeBlock';
+import array from '!!raw-loader!/src/06-arrays/main.rs';
+
+<CodeBlock language="rust" title="src/06-arrays/main.rs" showLineNumbers>{array}</CodeBlock>
+
+
+### Tuples
+Tuples elements can have different data types. Tuple elements are accessed using
+**dot** notation.
+
+import tuple from '!!raw-loader!/src/06-tuples/main.rs';
+
+<CodeBlock language="rust" title="src/06-tuples/main.rs" showLineNumbers>{tuple}</CodeBlock>
