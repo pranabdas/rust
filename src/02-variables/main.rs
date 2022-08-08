@@ -9,7 +9,7 @@ fn main() {
     x = 10 + 5;
     println!("My variable = {}", x);
 
-    const PI: f64 = 3.14159; // mut keyword in not allowed with const
+    const PI: f64 = 3.14159; // mut keyword is not allowed with const
     println!("Pi * 2 = {}", PI * 2);
 
     // variable shadowing
@@ -25,4 +25,6 @@ fn main() {
     }
 
     println!("spaces (outer scope) =  {spaces}");
+
+    // if a variable is declared but never used, use _ prefix to hide warnings
 }

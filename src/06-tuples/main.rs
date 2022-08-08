@@ -3,6 +3,7 @@ fn main() {
     let first_item = data.0;
 
     println!("First element of the tuple = {}", first_item);
+    println!("data = {:?}", data);    
 
     // destructuring
     let (age, height, name) = data;
