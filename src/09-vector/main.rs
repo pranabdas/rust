@@ -1,5 +1,6 @@
 fn main() {
     let vec1 = vec![1, 2, 3];
+    // notice the `{:?}` debug formatter
     println!("vec1 : {:?}", vec1);
 
     let mut vec2 = vec![5; 10]; // vector of length 10 with all 5
