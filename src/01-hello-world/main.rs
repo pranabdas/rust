@@ -10,14 +10,33 @@ fn main() {
     println!("{} {}", "Let's", "begin.");
     println!("I am {} years old.", 35);
     println!("{} + {} = {}", 22, 34, 22 + 34);
-    println!("Is 3 > 4? {}", 3 > 4);
+    println!("Is 3 > 4 ? {}", 3 > 4);
+    // rust figures out correct formatting via Display trait (it will work most
+    // cases)
 
-    // print multiple lines and line breaks
-    println!("Rust is suitable for\nsystem programming.");
+    // we can use positional argument
     println!(
-        "These are 
+        "Hello {0}, you are {1} years old. Good bye {0}.",
+        "Pranab", 35
+    );
+    println!(
+        "Hello {name}, you are {age} years old. Good bye {name}.",
+        name = "Pranab",
+        age = 35
+    );
+
+    // complex data types that do not implement Display trait, often have debug
+    // trait
+    println!("Debug formatter: {:?}", (2, 9)); // here we try to print a tuple
+
+    // print multiple lines with line breaks
+    println!("Rust is suitable for\nsystem programming.");
+
+    println!(
+        "These are
 separate lines."
     );
+
     println!(
         "This is \
     same line."

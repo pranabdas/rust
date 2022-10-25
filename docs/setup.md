@@ -29,6 +29,9 @@ rustup update
 Compiling a simple program:
 ```bash
 rustc main.rs
+
+# if you would like to change the name of the output
+rustc main.rs -o my_program
 ```
 
 Executing the binary after compilation:
@@ -44,6 +47,23 @@ project:
 cargo new my_rust_project
 ```
 
+There are two types of crates/ packages: library and binary. By default, cargo
+will create binary packages, which contains a `main` program. We can create
+specific type of package by:
+```bash
+cargo new my_rust_project --bin
+cargo new my_rust_project --lib
+```
+
+Alternatively, we can create our project folder manually, and initialize cargo:
+```bash
+mkdir new_rust_project
+cd new_rust_project
+cargo init
+# or
+cargo init --lib
+```
+
 Run:
 ```bash
 cd my_rust_project
@@ -55,7 +75,24 @@ Build:
 cargo build
 ```
 
+Executable will be placed under: `target/debug/`.
+
 Release:
 ```bash
-cargo release
+cargo build --release
 ```
+
+You can find optimized binary under: `target/release/`.
+
+## Additional tools
+Clippy:
+```bash
+rustup component add clippy-preview
+```
+
+Use clippy:
+```bash
+cargo clippy
+```
+
+It is probably faster than compile and run the code.

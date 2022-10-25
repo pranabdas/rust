@@ -7,8 +7,7 @@ struct User {
 }
 
 fn main() {
-    let user1 = User {
-        // if needed use `mut` here
+    let user1 = User { // if needed use `mut` here
         name: String::from("Pranab"),
         age: 35,
         height: 185.0,
