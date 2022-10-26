@@ -21,5 +21,19 @@ cargo build
 cargo run
 ```
 
+## Misc
+Clean up all the main files in the project:
+
+Waring: first run the command without `-delete` flag. `.git` directory might
+contain important files with name `main` as well. Make sure you do not run this
+command with `-delete` in the root of project directory.
+
+```console
+# go to src directory
+find . -type f -name main -delete
+# github codespace
+find /workspaces/rust/src -type f -name main -delete
+```
+
 ## Resources
 - <https://doc.rust-lang.org/book/title-page.html>

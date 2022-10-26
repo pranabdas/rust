@@ -42,8 +42,8 @@ fn main() {
 fn encode_date(date: &Date) -> u32 {
     (((date.year << 4) + date.month) << 5) + date.day
     //  |                    |
-    //  |                    next (year << 4 + moth) shifted 5 bits for day
-    // first year is shifted 4 bits to accommodate month
+    //  |                    (year << 4 + moth) shifted 5 bits for day
+    //  first, year is shifted 4 bits to accommodate month
 
     // i.e, last 5 bits for day, 4 bits before that is for month, remaining bits
     // before for year
