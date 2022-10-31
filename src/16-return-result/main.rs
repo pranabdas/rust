@@ -7,7 +7,7 @@ fn main() {
 
     match read_number() {
         Ok(age) => println!("You are {} years old.", age),
-        Err(err) => println!("{}", err),
+        Err(err) => eprintln!("{}", err),
     }
 }
 

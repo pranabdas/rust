@@ -1,3 +1,5 @@
+use std::error::Error;
+
 fn main() {
     let x: i8 = 34; // i8 can hold integers from [-128, 127], there will be
                     // compile error if we assign out of range values
@@ -10,7 +12,9 @@ fn main() {
     let ans = add_with_option(x, y);
 
     match ans {
-        None => println!("Using Option: There was an error."),
+        // better to print the error to STDERR instead of STDOUT
+        //./main 1> stdout.txt 2> stderr.txt
+        None => eprintln!("Using Option: There was an error."),
         Some(valid_ans) => println!("ans = {}", valid_ans),
     }
 
@@ -18,7 +22,7 @@ fn main() {
     let ans = add_with_option(x, y);
 
     match ans {
-        None => println!("Using Option: There was an error."),
+        None => eprintln!("Using Option: There was an error."),
         Some(valid_ans) => println!("ans = {}", valid_ans),
     }
 
@@ -31,14 +35,21 @@ fn main() {
     let ans = add_with_result(x, y);
 
     match ans {
-        Err(_) => println!("Using Result: Something went wrong."),
+        Err(_) => eprintln!("Using Result: Something went wrong."),
         Ok(val) => println!("ans = {}", val),
     }
 
     let ans = add_with_result2(x, y);
 
     match ans {
-        Err(err) => println!("{}", err),
+        Err(err) => eprintln!("{}", err),
+        Ok(val) => println!("ans = {}", val),
+    }
+
+    let ans = add_with_result3(x, y);
+
+    match ans {
+        Err(err) => eprintln!("{}", err),
         Ok(val) => println!("ans = {}", val),
     }
 }
@@ -53,7 +64,6 @@ fn add_with_option(x: i8, y: i8) -> Option<i8> {
 }
 
 fn add_with_result(x: i8, y: i8) -> Result<i8, ()> {
-    // let result = x.unchecked_add(y);
     (x.checked_add(y)).ok_or(()) // https://doc.rust-lang.org/std/primitive.unit.html
                                  // `()` empty tuple, , a zero-sized type (it
                                  // uses no memory). if nothing goes wrong,
@@ -62,6 +72,9 @@ fn add_with_result(x: i8, y: i8) -> Result<i8, ()> {
 }
 
 fn add_with_result2(x: i8, y: i8) -> Result<i8, String> {
-    // let result = x.unchecked_add(y);
     (x.checked_add(y)).ok_or("Error: failed to add.".to_string())
+}
+
+fn add_with_result3(x: i8, y: i8) -> Result<i8, Box<dyn Error>> {
+    (x.checked_add(y)).ok_or(<Box<dyn Error> as From<&str>>::from("Error while adding"))
 }

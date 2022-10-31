@@ -9,7 +9,7 @@ fn main() {
     if age.is_some() {
         println!("You are {} years old.", age.unwrap());
     } else {
-        println!("Invalid age (accepted age: positive integer [0-255]).");
+        eprintln!("Invalid age (accepted age: positive integer [0-255]).");
     }
 
     // alternative to using unwrap()
@@ -21,12 +21,12 @@ fn main() {
     if let Some(valid_age) = age {
         println!("You are {} years old.", valid_age);
     } else {
-        println!("Invalid age (accepted age: positive integer [0-255]).");
+        eprintln!("Invalid age (accepted age: positive integer [0-255]).");
     }
 
     // using match
     match age {
-        None => println!("Invalid age (accepted age: positive integer [0-255])."),
+        None => eprintln!("Invalid age (accepted age: positive integer [0-255])."),
         Some(valid_age) => println!("You are {} years old.", valid_age),
     }
 }

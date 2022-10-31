@@ -18,10 +18,9 @@ fn main() {
 
 fn swap(a: &mut i32, b: &mut i32) {
     let tmp = a.clone();
-    // use of raw pointer may be unsafe in terms of rust paradigm
     // https://doc.rust-lang.org/reference/types/pointer.html
-    // maybe instead of changing the values in the calling environment, we can
-    // return updated values, and let the caller handle ownership
+    // alternatively, instead of changing the values in the calling environment,
+    // we can return updated values, and let the caller handle ownership
     *a = b.clone();
     *b = tmp;
 }

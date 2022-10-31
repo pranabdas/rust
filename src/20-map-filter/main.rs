@@ -33,7 +33,7 @@ fn main() {
     let cities_starts_with_m = cities
         .into_iter()
         .filter(|n| n.starts_with("M") || n.starts_with("m"))
-        //                              --- this is a OR operator
+        //                              --- OR operator
         .collect::<Vec<_>>();
 
     println!("\nCity names starts with M:");
