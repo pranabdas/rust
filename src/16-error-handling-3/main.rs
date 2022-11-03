@@ -2,7 +2,7 @@
 use std::error::Error;
 
 // this is an example of error propagation from one function to another
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() -> Result<(), Box<dyn Error>> {
     let x: i8 = 45;
     let mut y: i8 = 34;
 
@@ -11,7 +11,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("ans = {}", ans);
 
     y = 100;
-    let ans = add(x, y)?;
+    let ans = add(x, y)?; // throws error as ans exceeds i8 range
     println!("ans = {}", ans);
 
     Ok(()) // in case of no error, we return empty tuple

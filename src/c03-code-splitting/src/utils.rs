@@ -1,5 +1,6 @@
 use std::str::FromStr;
 
+// private function
 fn read_string() -> String {
     let mut input = String::new();
     std::io::stdin()

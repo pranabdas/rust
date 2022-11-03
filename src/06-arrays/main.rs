@@ -1,13 +1,16 @@
 fn main() {
     let arr1 = [1, 2, 3];
     println!("Second element of arr1 = {}", arr1[1]);
+    println!("First element of arr1 = {:?}", arr1.get(0));
+    // get method returns Options<T> enum (Some(T) or None), we can print using
+    // debug formatter
 
     let mut arr2 = [2, 4, 6];
     arr2[0] = 0;
     println!("First element of arr2 = {}", arr2[0]);
 
     // swap two elements of an array
-    println!("arr2 before swap: {:?}", arr2);  
+    println!("arr2 before swap: {:?}", arr2);
     // this way you can print a whole array
     arr2.swap(1, 2);
     println!("arr2 after swap: {:?}", arr2);

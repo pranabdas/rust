@@ -38,5 +38,7 @@ fn main() {
         4.0 * (in_circle as f64) / (total as f64)
     );
 
-    println!("More accurate value: {}", 4.0 * (1.0_f64).atan());
+    println!("π = {}", 4.0 * (1.0_f64).atan());
+    println!("π = {}", std::f64::consts::PI); // alternative way to get value
+                                               // of PI
 }

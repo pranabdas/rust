@@ -84,10 +84,21 @@ cargo build --release
 
 You can find optimized binary under: `target/release/`.
 
+Update cargo dependencies:
+```bash
+cargo update --dry-run
+cargo update
+
+# update specific package(s)
+cargo update -p rand -p color
+
+cargo update -p rand --precise 0.8.0
+```
+
 ## Additional tools
 Clippy:
 ```bash
-rustup component add clippy-preview
+rustup component add clippy
 ```
 
 Use clippy:
@@ -96,3 +107,8 @@ cargo clippy
 ```
 
 It is probably faster than compile and run the code.
+
+Rust analyzer:
+```bash
+rustup component add rust-analyzer
+```

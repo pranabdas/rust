@@ -13,6 +13,10 @@ fn main() {
 
     let first = &vec3[0];
     println!("The first element is {}", first);
+    // like array, we can use get method as well, which will return Option<T>
+    // enum (either Some(T) or None in case of failure such as out of bound)
+    let second = &vec3.get(1).unwrap();
+    println!("Second element: {:?}", second);
 
     let second: &i32 = &vec3[1];
     println!("The second element is {}", second);

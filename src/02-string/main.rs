@@ -1,4 +1,12 @@
 fn main() {
+    // string literal: they are hard coded into the compiled binary, must be
+    // known compile time.
+    let mut message = "Hello";
+    println!("message: {}", message);
+
+    message = "Hello rust";
+    println!("message: {}", message);
+
     let mut planet = String::from("Earth");
     // this assignment is different from string literal
     // String type stored in the heap and its size can be dynamically changed
@@ -16,7 +24,7 @@ fn main() {
     // free/ delete the allocated memory, or Java where garbage collector looks
     // for unused memory and frees it periodically
 
-    // in newer C++ standard, similar pattern (Resource Acquisition Is 
+    // in newer C++ standard, similar pattern (Resource Acquisition Is
     // Initialization) is implemented (see, unique_pointer)
 
     let x: i32 = 5;
@@ -35,7 +43,7 @@ fn main() {
                                    // capacity to the new variable
 
     // after this statement the message variable goes out of scope, it is to
-    // guarantee memory safety, otherwise there could be double drop 
+    // guarantee memory safety, otherwise there could be double drop
     // (deallocation) calls
 
     // this is therefore move, not even a shallow copy, the previous variable

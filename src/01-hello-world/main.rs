@@ -1,4 +1,6 @@
 use std::io::{self, Write}; // require for flushing tty
+// macros like println, basic data types etc. are included in rust standard
+// library prelude, if we need anything extra, we need to import them manually
 
 fn main() {
     // the exclamation mark indicates println is a macro, without `!` it would
