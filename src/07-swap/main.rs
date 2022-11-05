@@ -7,6 +7,10 @@ fn main() {
     swap(&mut a, &mut b);
     println!("After : a = {}, b = {}", a, b);
 
+    // using in-built standard library
+    std::mem::swap(&mut a, &mut b);
+    println!("Swap again: a = {}, b = {}", a, b);
+
     println!("{}", &a); // this prints value of `a` (not memory address)
     increase(&mut a);
     println!("{}", a);

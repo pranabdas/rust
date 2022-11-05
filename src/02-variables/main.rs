@@ -7,18 +7,22 @@ fn main() {
     println!("My variable = {}", x);
 
     x = 10 + 5; // rust will automatically try to infer the type from assignment
+                // explicit type declaration:
+                // let x: i32 = 5;
+                // let y = 32_u8;
     println!("My variable = {}", x);
     type_of(&x); // this is i32
 
     let a = 5;
     let b = 6;
-    type_of(&a); // type of `a` and `b` will be converted to u8 because of the
+    type_of(&a); // type of `a` and `b` will be set as u8 because of the
                  // following statement
     let c: u8 = a + b; // rust compiler is smart enough to convert previous
                        // assignments data types
     type_of(&c);
 
     const PI: f64 = 3.14159; // mut keyword is not allowed with const
+                             // cannot be shadowed
     println!("Pi * 2 = {}", PI * 2.0); // int cannot be multiplied by float
 
     // variable shadowing
@@ -26,7 +30,7 @@ fn main() {
 
     // it is allowed to declare variables with same name shadowing the previous
     // variable with the same name
-    let spaces = spaces.len(); // notice data type is different too
+    let spaces = spaces.len(); // notice data type has changed too
 
     {
         let spaces = spaces * 2;
@@ -50,7 +54,7 @@ fn main() {
     // uses static allocation (in contrast to stack allocation)
     // style guide: use capital letters for static variables (separated with
     // underscores)
-    static NO_WEEK_DAYS: i32 = 7;
+    static NO_WEEK_DAYS: u8 = 7;
     println!("No of days in a week = {}", NO_WEEK_DAYS);
 }
 
@@ -58,4 +62,3 @@ fn main() {
 fn type_of<T>(_: &T) {
     println!("Type: {}", std::any::type_name::<T>())
 }
-

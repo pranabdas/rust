@@ -37,6 +37,6 @@
     "unifiedjs.vscode-mdx",
     "mutantdino.resourcemonitor"
   ],
-  "postCreateCommand": "rustup component add clippy rust-analyzer",
+  "postCreateCommand": "bash setup.sh",
   "waitFor": "postCreateCommand"
 }

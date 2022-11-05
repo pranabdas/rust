@@ -32,6 +32,9 @@ rustc main.rs
 
 # if you would like to change the name of the output
 rustc main.rs -o my_program
+
+# optimize the executable
+rustc -O main.rs
 ```
 
 Executing the binary after compilation:

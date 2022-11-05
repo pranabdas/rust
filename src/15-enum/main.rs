@@ -25,6 +25,8 @@ enum Color {
 impl WeekDay {
     fn print_day(&self) {
         match self {
+            // `self` indicates the value on which match applies
+            // `Self` refers to type of `self` (Rust is case-sensitive)
             Self::Sunday => println!("Sunday"),
             Self::Monday => println!("Monday"),
             Self::Tuesday => println!("Tuesday"),
@@ -114,7 +116,6 @@ fn main() {
     println!("Day after tomorrow is {:?}", today.day_after_tomorrow());
 
     today.print_day();
-
 
     let favorite_color = Color::Blue;
     println!("My favorite color is {:06x}", favorite_color as i32);
