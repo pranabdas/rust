@@ -37,6 +37,6 @@
     "unifiedjs.vscode-mdx",
     "mutantdino.resourcemonitor"
   ],
-  "postCreateCommand": "bash setup.sh",
+  "postCreateCommand": "bash ./.devcontainer/setup.sh",
   "waitFor": "postCreateCommand"
 }
