@@ -10,7 +10,7 @@ async function config() {
     baseUrl: "/rust/", // must have a trailing "/"
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
-    favicon: "img/favicon.ico",
+    favicon: "img/favicon.png",
     organizationName: "pranabdas", // Usually your GitHub org/user name.
     projectName: "rust", // Usually your repo name.
     titleDelimiter: "•",
@@ -43,7 +43,7 @@ async function config() {
           hideOnScroll: true,
           logo: {
             alt: "Logo",
-            src: "img/favicon.ico",
+            src: "img/favicon.png",
           },
           items: [
             {
@@ -142,8 +142,7 @@ async function config() {
         },
         footer: {
           style: "dark",
-          copyright: `Copyright © ${new Date().getFullYear()} Pranab Das. All rights
-      reserved.`,
+          copyright: `Copyright © ${new Date().getFullYear()} Pranab Das. All rights reserved.`,
         },
       }),
 
