@@ -3,7 +3,7 @@ title: Installing Rust in your computer
 sidebar_label: Setup
 slug: /
 ---
-Go to the website <https://rustup.rs> and follow the instruction for your OS. On
+Go to the website https://rustup.rs and follow the instruction for your OS. On
 UNIX/Linux:
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
