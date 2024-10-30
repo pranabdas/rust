@@ -17,7 +17,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{ name: "theme-color", content: "#081020" }],
+      metadata: [{ name: "theme-color", content: "#06445c" }],
       prism: {
         theme: themes.github,
         darkTheme: themes.nightOwl,
@@ -30,13 +30,12 @@ const config = {
         },
       },
       colorMode: {
-        // disableSwitch: true,
         // defaultMode: "dark",
-        // respectPrefersColorScheme: false,
         // switchConfig: {
-        //   darkIcon: '☾',
-        //   lightIcon: "☀️"
+        //   darkIcon: "☾",
+        //   lightIcon: "☀️",
         // },
+        respectPrefersColorScheme: true,
       },
       navbar: {
         title: "Rust tutorial",

@@ -1,11 +1,11 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "rust": {
       "version": "latest"
     },
     "node": {
-      "version": "20"
+      "version": "22"
     }
   },
   "customizations": {
