@@ -5,7 +5,7 @@
       "version": "latest"
     },
     "node": {
-      "version": "22"
+      "version": "lts/*"
     }
   },
   "customizations": {
