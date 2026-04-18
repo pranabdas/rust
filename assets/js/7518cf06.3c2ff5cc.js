@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrust_tutorial=self.webpackChunkrust_tutorial||[]).push([["34"],{8368(t){t.exports=JSON.parse('{"metadata":{"permalink":"/rust/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

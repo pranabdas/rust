@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrust_tutorial=self.webpackChunkrust_tutorial||[]).push([["833"],{5513(t){t.exports=JSON.parse('{"title":"Recent posts","items":[]}')}}]);
